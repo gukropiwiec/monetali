@@ -1,0 +1,10 @@
+.img-header-logo {
+    max-width: 143px;
+    filter: brightness(0);
+}
+
+@media screen and (min-width: 992px) {
+    .nav-content-position {
+        justify-content: end;
+    }
+}

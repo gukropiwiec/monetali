@@ -1,0 +1,25 @@
+name: CI
+
+on:
+    push:
+        # PUT BRANCH 'master' HERE
+        branches: ['']
+
+jobs:
+    build-and-deploy:
+        runs-on: windows-latest
+        environment:
+            name: production
+            url: '' # INDICATE URL HERE
+        steps:
+            - uses: actions/checkout@v3
+            - name: Install dependencies
+              run: |
+                  npm cache verify
+                  npm install
+            - name: Linting
+              run: npm run lint
+            - name: Deploy with GH Pages
+              env:
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+              run: npm run ng -- deploy --name="Gustavo Kropiwiec" --email=gustavosk17@hotmail.com
