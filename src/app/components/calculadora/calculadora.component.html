@@ -36,31 +36,31 @@
     <div class="inputs mt-5">
         <div class="input-group mb-3 d-none" id="ig-inss">
             <span class="input-group-text" id="span-inss">INSS</span>
-            <input type="text" class="form-control" aria-label="INSS" id="input-inss" aria-describedby="span-inss" value="0">
+            <input type="text" class="form-control" aria-label="INSS" id="input-inss" aria-describedby="span-inss" value="0" (input)="mask($event)">
         </div>
         <div class="input-group mb-3 d-none" id="ig-pis">
             <span class="input-group-text" id="span-pis">PIS</span>
-            <input type="text" class="form-control" aria-label="PIS" id="input-pis" aria-describedby="span-pis" value="0">
+            <input type="text" class="form-control" aria-label="PIS" id="input-pis" aria-describedby="span-pis" value="0" (input)="mask($event)">
         </div>
         <div class="input-group mb-3 d-none" id="ig-cofins">
             <span class="input-group-text" id="span-cofins">COFINS</span>
-            <input type="text" class="form-control" aria-label="COFINS" id="input-cofins" aria-describedby="span-cofins" value="0">
+            <input type="text" class="form-control" aria-label="COFINS" id="input-cofins" aria-describedby="span-cofins" value="0" (input)="mask($event)">
         </div>
         <div class="input-group mb-3 d-none" id="ig-irpj">
             <span class="input-group-text" id="span-irpj">IRPJ</span>
-            <input type="text" class="form-control" aria-label="IRPJ" id="input-irpj" aria-describedby="span-irpj" value="0">
+            <input type="text" class="form-control" aria-label="IRPJ" id="input-irpj" aria-describedby="span-irpj" value="0" (input)="mask($event)">
         </div>
         <div class="input-group mb-3 d-none" id="ig-csll">
             <span class="input-group-text" id="span-csll">CSLL</span>
-            <input type="text" class="form-control" aria-label="CSLL" id="input-csll" aria-describedby="span-csll" value="0">
+            <input type="text" class="form-control" aria-label="CSLL" id="input-csll" aria-describedby="span-csll" value="0" (input)="mask($event)">
         </div>
         <div class="input-group mb-3 d-none" id="ig-ipi">
             <span class="input-group-text" id="span-ipi">IPI</span>
-            <input type="text" class="form-control" aria-label="IPI" id="input-ipi" aria-describedby="span-ipi" value="0">
+            <input type="text" class="form-control" aria-label="IPI" id="input-ipi" aria-describedby="span-ipi" value="0" (input)="mask($event)">
         </div>
         <div class="input-group mb-3 d-none" id="ig-todos">
             <span class="input-group-text input-group-text-todos" id="span-todos">Valor Total</span>
-            <input type="text" class="form-control" aria-label="todos" id="input-todos" aria-describedby="span-todos" value="0">
+            <input type="text" class="form-control" aria-label="todos" id="input-todos" aria-describedby="span-todos" value="0" (input)="mask($event)">
         </div>
         <button (click)="calcular()" class="btn btn-success">Calcular</button>
     </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { mascaraMoeda } from 'src/app/utils/functions';
 
 @Component({
     selector: 'app-calculadora',
@@ -58,5 +59,9 @@ export class CalculadoraComponent {
             return;
         }
         return document.getElementById(`ig-${tipo}`)?.classList.toggle('d-none');
+    }
+
+    mask(event: Event) {
+        mascaraMoeda(event);
     }
 }
