@@ -12,12 +12,12 @@ export class CalculadoraComponent {
     todosChecked = false;
 
     limparInputs() {
-        if (!(document.getElementById('switch-inss') as HTMLInputElement).checked) (document.getElementById('input-inss') as HTMLInputElement).value = '0';
-        if (!(document.getElementById('switch-pis') as HTMLInputElement).checked) (document.getElementById('input-pis') as HTMLInputElement).value = '0';
-        if (!(document.getElementById('switch-cofins') as HTMLInputElement).checked) (document.getElementById('input-cofins') as HTMLInputElement).value = '0';
-        if (!(document.getElementById('switch-irpj') as HTMLInputElement).checked) (document.getElementById('input-irpj') as HTMLInputElement).value = '0';
-        if (!(document.getElementById('switch-csll') as HTMLInputElement).checked) (document.getElementById('input-csll') as HTMLInputElement).value = '0';
-        if (!(document.getElementById('switch-ipi') as HTMLInputElement).checked) (document.getElementById('input-ipi') as HTMLInputElement).value = '0';
+        if (!(document.getElementById('switch-inss') as HTMLInputElement).checked) (document.getElementById('input-inss') as HTMLInputElement).value = '';
+        if (!(document.getElementById('switch-pis') as HTMLInputElement).checked) (document.getElementById('input-pis') as HTMLInputElement).value = '';
+        if (!(document.getElementById('switch-cofins') as HTMLInputElement).checked) (document.getElementById('input-cofins') as HTMLInputElement).value = '';
+        if (!(document.getElementById('switch-irpj') as HTMLInputElement).checked) (document.getElementById('input-irpj') as HTMLInputElement).value = '';
+        if (!(document.getElementById('switch-csll') as HTMLInputElement).checked) (document.getElementById('input-csll') as HTMLInputElement).value = '';
+        if (!(document.getElementById('switch-ipi') as HTMLInputElement).checked) (document.getElementById('input-ipi') as HTMLInputElement).value = '';
     }
 
     calcular() {
