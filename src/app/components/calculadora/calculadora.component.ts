@@ -22,22 +22,24 @@ export class CalculadoraComponent {
 
     calcular() {
         this.limparInputs();
+        console.log((document.getElementById('input-inss') as HTMLInputElement).value);
+        console.log((document.getElementById('input-inss') as HTMLInputElement).value.substring(3).replaceAll('.', ''));
         if (!this.todosChecked) {
-            const valorInss = Number((document.getElementById('input-inss') as HTMLInputElement).value.substring(3).replace(',', '.'));
-            const valorPis = Number((document.getElementById('input-pis') as HTMLInputElement).value.substring(3).replace(',', '.'));
-            const valorCofins = Number((document.getElementById('input-cofins') as HTMLInputElement).value.substring(3).replace(',', '.'));
-            const valorIrpj = Number((document.getElementById('input-irpj') as HTMLInputElement).value.substring(3).replace(',', '.'));
-            const valorCsll = Number((document.getElementById('input-csll') as HTMLInputElement).value.substring(3).replace(',', '.'));
-            const valorIpi = Number((document.getElementById('input-ipi') as HTMLInputElement).value.substring(3).replace(',', '.'));
+            const valorInss = Number((document.getElementById('input-inss') as HTMLInputElement).value.substring(3).replaceAll('.', '').replace(',', '.'));
+            const valorPis = Number((document.getElementById('input-pis') as HTMLInputElement).value.substring(3).replaceAll('.', '').replace(',', '.'));
+            const valorCofins = Number((document.getElementById('input-cofins') as HTMLInputElement).value.substring(3).replaceAll('.', '').replace(',', '.'));
+            const valorIrpj = Number((document.getElementById('input-irpj') as HTMLInputElement).value.substring(3).replaceAll('.', '').replace(',', '.'));
+            const valorCsll = Number((document.getElementById('input-csll') as HTMLInputElement).value.substring(3).replaceAll('.', '').replace(',', '.'));
+            const valorIpi = Number((document.getElementById('input-ipi') as HTMLInputElement).value.substring(3).replaceAll('.', '').replace(',', '.'));
         
             this.total = valorInss + valorPis + valorCofins + valorIrpj + valorCsll + valorIpi;
 
             this.totalAnual = (valorPis + valorCofins + valorIrpj + valorCsll + valorIpi) * 12 + valorInss * 13;
         } else {
-            this.total = Number((document.getElementById('input-todos') as HTMLInputElement).value.substring(3).replace(',', '.'));
-            this.totalAnual = Number((document.getElementById('input-todos') as HTMLInputElement).value.substring(3).replace(',', '.')) * 12;
+            this.total = Number((document.getElementById('input-todos') as HTMLInputElement).value.substring(3).replaceAll('.', '').replace(',', '.'));
+            this.totalAnual = Number((document.getElementById('input-todos') as HTMLInputElement).value.substring(3).replaceAll('.', '').replace(',', '.')) * 12;
         }
-        this.limparInputs();
+        console.log(this.total);
     }
 
     changeSwitch(tipo: string) {
