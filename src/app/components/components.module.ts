@@ -6,13 +6,15 @@ import { ServicosComponent } from './servicos/servicos.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 const moduleComponents = [
     HeaderComponent,
     HeadlineComponent,
     ServicosComponent,
     CalculadoraComponent,
-    ClientesComponent
+    ClientesComponent,
+    FooterComponent
 ];
 
 @NgModule({
