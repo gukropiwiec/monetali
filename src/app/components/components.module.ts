@@ -7,6 +7,8 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 const moduleComponents = [
     HeaderComponent,
@@ -14,13 +16,15 @@ const moduleComponents = [
     ServicosComponent,
     CalculadoraComponent,
     ClientesComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
 ];
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        CarouselModule
     ],
     declarations: moduleComponents,
     exports: moduleComponents,

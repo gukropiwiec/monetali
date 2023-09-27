@@ -1,0 +1,15 @@
+<section class="padding-section">
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-12">
+                <owl-carousel-o [options]="defaultCarouselOptions">
+                    <ng-container *ngFor="let slide of fotos; let i = index">
+                        <ng-template carouselSlide>
+                            <img class="rounded img-size" [src]="slide" alt="{{ 'Carrossel slide ' + (i + 1) }}" />
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
