@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ComponentsModule } from './components/components.module';
 import { CalculadoraPageComponent } from './pages/calculadora-page/calculadora-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { CalculadoraPageComponent } from './pages/calculadora-page/calculadora-p
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ComponentsModule
+        ComponentsModule,
+        RouterModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -13,15 +13,16 @@
 
 :root {
     --header-bg: rgba(128, 128, 128, 0.884);
+    --header-second-bg: rgba(86, 139, 207, 0.98);
 }
 
 // CSS
 header {
     nav {
-        background-color: var(--header-bg);
+        background-color: var(--header-second-bg);
 
         .nav-item {
-            color: black;
+            color: white;
         }
     }
 }

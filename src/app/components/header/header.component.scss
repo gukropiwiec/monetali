@@ -1,6 +1,6 @@
 .img-header-logo {
     max-width: 143px;
-    filter: brightness(0);
+    filter: brightness(0) invert(1);
 }
 
 @media screen and (min-width: 992px) {

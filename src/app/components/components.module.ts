@@ -4,17 +4,21 @@ import { HeaderComponent } from './header/header.component';
 import { HeadlineComponent } from './headline/headline.component';
 import { ServicosComponent } from './servicos/servicos.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { RouterModule } from '@angular/router';
 
 const moduleComponents = [
     HeaderComponent,
     HeadlineComponent,
     ServicosComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    ClientesComponent
 ];
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        RouterModule
     ],
     declarations: moduleComponents,
     exports: moduleComponents,
