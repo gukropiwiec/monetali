@@ -1,80 +1,82 @@
 <section>
-    <h3 class="text-center">Calculadora</h3>
-    <div class="alert alert-warning my-5" role="alert">
-        Caso não saiba os valores de cada imposto, selecione a opção <b>"Todos os impostos federais"</b>
-    </div>
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="switch-todos" (change)="changeSwitch('todos')">
-        <label class="form-check-label" for="switch-todos">Todos os impostos federais</label>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-6 col-md-2">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="switch-inss" (change)="changeSwitch('inss')" [disabled]="todosChecked">
-                <label class="form-check-label" for="switch-inss">INSS</label>
-            </div>
-            <div class="form-check form-switch my-2">
-                <input class="form-check-input" type="checkbox" id="switch-pis" (change)="changeSwitch('pis')" [disabled]="todosChecked">
-                <label class="form-check-label" for="switch-pis">PIS</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="switch-cofins" (change)="changeSwitch('cofins')" [disabled]="todosChecked">
-                <label class="form-check-label" for="switch-cofins">COFINS</label>
-            </div>
+    <article>
+        <h3 class="text-center">Calculadora de Impostos</h3>
+        <div class="alert alert-warning my-5" role="alert">
+            Caso não saiba os valores de cada imposto, selecione a opção <b>"Todos os impostos federais"</b>
         </div>
-        <div class="col-6 col-md-2">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="switch-irpj" (change)="changeSwitch('irpj')" [disabled]="todosChecked">
-                <label class="form-check-label" for="switch-irpj">IRPJ</label>
-            </div>
-            <div class="form-check form-switch my-2">
-                <input class="form-check-input" type="checkbox" id="switch-csll" (change)="changeSwitch('csll')" [disabled]="todosChecked">
-                <label class="form-check-label" for="switch-csll">CSLL</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="switch-ipi" (change)="changeSwitch('ipi')" [disabled]="todosChecked">
-                <label class="form-check-label" for="switch-ipi">IPI</label>
-            </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switch-todos" (change)="changeSwitch('todos')">
+            <label class="form-check-label" for="switch-todos">Todos os impostos federais</label>
         </div>
-    </div>
-
-    <div class="inputs mt-5">
-        <div class="input-group mb-3 d-none" id="ig-inss">
-            <span class="input-group-text" id="span-inss">INSS</span>
-            <input type="text" class="form-control" inputmode="numeric" aria-label="INSS" id="input-inss" aria-describedby="span-inss" value="" (input)="mask($event)">
-        </div>
-        <div class="input-group mb-3 d-none" id="ig-pis">
-            <span class="input-group-text" id="span-pis">PIS</span>
-            <input type="text" class="form-control" inputmode="numeric" aria-label="PIS" id="input-pis" aria-describedby="span-pis" value="" (input)="mask($event)">
-        </div>
-        <div class="input-group mb-3 d-none" id="ig-cofins">
-            <span class="input-group-text" id="span-cofins">COFINS</span>
-            <input type="text" class="form-control" inputmode="numeric" aria-label="COFINS" id="input-cofins" aria-describedby="span-cofins" value="" (input)="mask($event)">
-        </div>
-        <div class="input-group mb-3 d-none" id="ig-irpj">
-            <span class="input-group-text" id="span-irpj">IRPJ</span>
-            <input type="text" class="form-control" inputmode="numeric" aria-label="IRPJ" id="input-irpj" aria-describedby="span-irpj" value="" (input)="mask($event)">
-        </div>
-        <div class="input-group mb-3 d-none" id="ig-csll">
-            <span class="input-group-text" id="span-csll">CSLL</span>
-            <input type="text" class="form-control" inputmode="numeric" aria-label="CSLL" id="input-csll" aria-describedby="span-csll" value="" (input)="mask($event)">
-        </div>
-        <div class="input-group mb-3 d-none" id="ig-ipi">
-            <span class="input-group-text" id="span-ipi">IPI</span>
-            <input type="text" class="form-control" inputmode="numeric" aria-label="IPI" id="input-ipi" aria-describedby="span-ipi" value="" (input)="mask($event)">
-        </div>
-        <div class="input-group mb-3 d-none" id="ig-todos">
-            <span class="input-group-text input-group-text-todos" id="span-todos">Valor Total</span>
-            <input type="text" class="form-control" inputmode="numeric" aria-label="todos" id="input-todos" aria-describedby="span-todos" value="" (input)="mask($event)">
-        </div>
-        <button (click)="calcular()" class="btn btn-success">Calcular</button>
-    </div>
-    <div class="my-5">
-        <h4>Pagamento mensal: <b>{{ total * 0.8 | currency:'BRL' }}</b></h4>
-        <h4 class="text-success">Economia mensal: <b>{{ total * 0.2 | currency:'BRL' }}</b></h4>
         <br>
-        <h4>Pagamento anual: <b>{{ totalAnual * 0.8 | currency:'BRL' }}</b></h4>
-        <h4 class="text-success">Economia anual: <b>{{ totalAnual * 0.2 | currency:'BRL' }}</b></h4>
-    </div>
+        <div class="row">
+            <div class="col-6 col-md-2">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switch-inss" (change)="changeSwitch('inss')" [disabled]="todosChecked">
+                    <label class="form-check-label" for="switch-inss">INSS</label>
+                </div>
+                <div class="form-check form-switch my-2">
+                    <input class="form-check-input" type="checkbox" id="switch-pis" (change)="changeSwitch('pis')" [disabled]="todosChecked">
+                    <label class="form-check-label" for="switch-pis">PIS</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switch-cofins" (change)="changeSwitch('cofins')" [disabled]="todosChecked">
+                    <label class="form-check-label" for="switch-cofins">COFINS</label>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switch-irpj" (change)="changeSwitch('irpj')" [disabled]="todosChecked">
+                    <label class="form-check-label" for="switch-irpj">IRPJ</label>
+                </div>
+                <div class="form-check form-switch my-2">
+                    <input class="form-check-input" type="checkbox" id="switch-csll" (change)="changeSwitch('csll')" [disabled]="todosChecked">
+                    <label class="form-check-label" for="switch-csll">CSLL</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switch-ipi" (change)="changeSwitch('ipi')" [disabled]="todosChecked">
+                    <label class="form-check-label" for="switch-ipi">IPI</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="inputs mt-5">
+            <div class="input-group mb-3 d-none" id="ig-inss">
+                <span class="input-group-text" id="span-inss">INSS</span>
+                <input type="text" class="form-control" inputmode="numeric" aria-label="INSS" id="input-inss" aria-describedby="span-inss" value="" (input)="mask($event)">
+            </div>
+            <div class="input-group mb-3 d-none" id="ig-pis">
+                <span class="input-group-text" id="span-pis">PIS</span>
+                <input type="text" class="form-control" inputmode="numeric" aria-label="PIS" id="input-pis" aria-describedby="span-pis" value="" (input)="mask($event)">
+            </div>
+            <div class="input-group mb-3 d-none" id="ig-cofins">
+                <span class="input-group-text" id="span-cofins">COFINS</span>
+                <input type="text" class="form-control" inputmode="numeric" aria-label="COFINS" id="input-cofins" aria-describedby="span-cofins" value="" (input)="mask($event)">
+            </div>
+            <div class="input-group mb-3 d-none" id="ig-irpj">
+                <span class="input-group-text" id="span-irpj">IRPJ</span>
+                <input type="text" class="form-control" inputmode="numeric" aria-label="IRPJ" id="input-irpj" aria-describedby="span-irpj" value="" (input)="mask($event)">
+            </div>
+            <div class="input-group mb-3 d-none" id="ig-csll">
+                <span class="input-group-text" id="span-csll">CSLL</span>
+                <input type="text" class="form-control" inputmode="numeric" aria-label="CSLL" id="input-csll" aria-describedby="span-csll" value="" (input)="mask($event)">
+            </div>
+            <div class="input-group mb-3 d-none" id="ig-ipi">
+                <span class="input-group-text" id="span-ipi">IPI</span>
+                <input type="text" class="form-control" inputmode="numeric" aria-label="IPI" id="input-ipi" aria-describedby="span-ipi" value="" (input)="mask($event)">
+            </div>
+            <div class="input-group mb-3 d-none" id="ig-todos">
+                <span class="input-group-text input-group-text-todos" id="span-todos">Valor Total</span>
+                <input type="text" class="form-control" inputmode="numeric" aria-label="todos" id="input-todos" aria-describedby="span-todos" value="" (input)="mask($event)">
+            </div>
+            <button (click)="calcular()" class="btn btn-success">Calcular</button>
+        </div>
+        <div class="my-5">
+            <h4>Pagamento mensal: <b>{{ total * 0.8 | currency:'BRL' }}</b></h4>
+            <h4 class="text-success">Economia mensal: <b>{{ total * 0.2 | currency:'BRL' }}</b></h4>
+            <br>
+            <h4>Pagamento anual: <b>{{ totalAnual * 0.8 | currency:'BRL' }}</b></h4>
+            <h4 class="text-success">Economia anual: <b>{{ totalAnual * 0.2 | currency:'BRL' }}</b></h4>
+        </div>
+    </article>
 </section>
