@@ -30,17 +30,23 @@ img:first-child{
 .subtitle, .monetali {
     position: absolute;
     z-index: 1;
+    color: white;
 }
 
 .subtitle {
     margin-top: 15rem;
-    color: white;
     font-size: 24px;
 }
 
 .monetali {
     margin-top: 30rem;
-    font-size: 30px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    height: 20px;
 }
 
 a {
@@ -63,14 +69,17 @@ a:hover{
     .subtitle {
         width: 60%;
         text-align: center;
-        font-size: 15px;
-        margin-top: 9rem;
+        font-size: 12px;
+        margin-top: 7rem;
     }
     .second-img {
-        font-size: 20px;
+        font-size: 18px;
     }
     .monetali{
-        margin-top: 16rem;
-        font-size: 18px;
+        margin-top: 15rem;
+        font-size: 15px;
+    }
+    p {
+        height: 10px;
     }
 }
