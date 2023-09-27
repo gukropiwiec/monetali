@@ -8,3 +8,13 @@ p {
     padding: 10px;
     font-size: 18px;
 }
+
+@media screen and (max-width: 767px) {
+    section {
+        flex-direction: column;
+    }
+    
+    p {
+        font-size: 13px;
+    }
+}
