@@ -1,15 +1,15 @@
 <section>
     <article>
-        <h3 class="text-center">Calculadora de Impostos</h3>
+        <h3 class="text-center"><b>Calculadora de Impostos</b></h3>
         <div class="alert alert-warning my-5" role="alert">
             Caso não saiba os valores de cada imposto, selecione a opção <b>"Todos os impostos federais"</b>
         </div>
-        <div class="form-check form-switch">
+        <div class="fw-bold form-check form-switch">
             <input class="form-check-input" type="checkbox" id="switch-todos" (change)="changeSwitch('todos')">
             <label class="form-check-label" for="switch-todos">Todos os impostos federais</label>
         </div>
         <br>
-        <div class="row">
+        <div class="row fw-bold">
             <div class="col-6 col-md-2">
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="switch-inss" (change)="changeSwitch('inss')" [disabled]="todosChecked">
