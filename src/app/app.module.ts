@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ComponentsModule } from './components/components.module';
 import { CalculadoraPageComponent } from './pages/calculadora-page/calculadora-page.component';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -23,7 +24,8 @@ registerLocaleData(ptBr);
         BrowserModule,
         AppRoutingModule,
         ComponentsModule,
-        RouterModule
+        RouterModule,
+        BrowserAnimationsModule
     ],
     providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
     bootstrap: [AppComponent]
