@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy": "ng deploy"
+    "deploy": "ng deploy --cname=credtax.com.br"
   },
   "private": true,
   "dependencies": {
